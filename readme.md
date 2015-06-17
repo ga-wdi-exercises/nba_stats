@@ -14,7 +14,7 @@ Run `gem install pg` to install the pg gem. The pg gem allows us to run SQL in a
 
 Run the `load_data.rb` Ruby program __ONCE__ to populate the database. It reads in the CSV information from the `data.csv` textfile and populates your database. The data is structured like the following:`name,age,team,games,points`
 
-** `games` is games played during the season and `points` is total points scored over the course of the season.
+** `games` is games played during the season and `points`is total points scored over the course of the season.
 
 ### Part 3
 
