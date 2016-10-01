@@ -2,21 +2,19 @@
 
 ### Part 1
 
-Fire up psql and create a database called `nba_db`.
-
-I've created the schema for a table called `players` in the file `players.sql`. The schema includes an id, name, age, team, games, and points.
-
-Run the `players.sql` file for your `nba_db` by typing`psql -d nba_db -f players.sql` into your terminal (not in psql). This will create the players table in your nba_db.
-
-### Part 2
-
-Run `gem install pg` to install the pg gem. The pg gem allows us to run SQL in a Ruby file.
+Run `gem install sqlite3` to install the sqlite gem. The sqlite gem allows us to run SQL in a Ruby file.
 
 Run the `load_data.rb` Ruby program __ONCE__ (use the command: ```ruby load_data.rb```)to populate the database. It reads in the CSV information from the `data.csv` textfile and populates your database. The data is structured like the following:`name,age,team,games,points`
 
 ** `games` is games played during the season and `points` is total points scored over the course of the season.
 
 ### Part 3
+
+Enter the sqlite prompt:
+
+```
+$ sqlite3 nba.db
+```
 
 Figure out the appropriate SQL commands to find out the following, and keep track of them in the file called `sql_commands.txt`
 

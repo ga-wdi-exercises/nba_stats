@@ -1,6 +1,6 @@
-require 'pg'
+require 'sqlite3'
 
-db_conn = PG.connect(:dbname => 'nba_db', :host => 'localhost')
+db_conn = SQLite3::Database.new "nba.db"
 
 file = File.new("data.csv", "a+")
 
@@ -15,10 +15,8 @@ file.each do |line|
   sql  = "INSERT INTO players (name, age, team, games, points)"
   sql += "VALUES ( '#{name}', '#{age}', '#{team}', '#{games_played}', '#{points}');"
 
-  db_conn.exec(sql)
+  db_conn.execute(sql)
 
 end
 
 file.close
-
-db_conn.close
